@@ -285,31 +285,27 @@ footer{background:#0a1e25;color:#8ea6a1;text-align:center;padding:22px 0 90px;fo
   <div class="wrap">© 2026 استوديو Rendernosora. جميع الحقوق محفوظة.</div>
 </footer>
 
+<!-- سطر التنسيقات الأساسي لإظهار وتنسيق الفقاعة -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
 <script type="module">
-import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-createChat({
-  webhookUrl: 'https://djanna19.app.n8n.cloud/webhook/7a7bb68b-e3f1-4458-bfdd-cfe0d68207d3/chat',
-  initialMessages: [
-    'أهلاً وسهلاً 🌿',
-    'كيف أقدر أساعدك اليوم في تصميم مساحتك أو رندر منتجاتك؟'
-  ],
-  i18n: {
-    en: {
-      title: 'أهلاً بك 👋',
-      subtitle: 'استوديو Rendernosora جاهز لمساعدتك',
-      inputPlaceholder: 'اكتب رسالتك...',
-      getStarted: 'محادثة جديدة'
+  createChat({
+    webhookUrl: 'https://djanna19.app.n8n.cloud/webhook/7a7bb68b-e3f1-4458-bfdd-cfe0d68207d3/chat',
+    initialMessages: [
+      '👋 أهلاً وسهلاً!',
+      'كيف أقدر أساعدك اليوم في تصميم مساحتك أو رندر منتجاتك؟'
+    ],
+    i18n: {
+      en: {
+        title: '👋 أهلاً بك',
+        subtitle: 'استوديو Rendernosora جاهز لمساعدتك',
+        inputPlaceholder: 'اكتب رسالتك...',
+        getStarted: 'محادثة جديدة'
+      }
     }
-  }
-});
-
-// زر "ابدأ المحادثة" يفتح فقاعة الشات
-document.getElementById('openChat').addEventListener('click', () => {
-  const toggle = document.querySelector('.chat-window-toggle');
-  if (toggle) toggle.click();
-});
+  });
 </script>
-
 </body>
 </html>
